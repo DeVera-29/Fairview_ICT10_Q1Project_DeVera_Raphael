@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <title>Untitled Guitar Store - Receipt</title>
+</head>
+<body>
+    
+    <nav>
+        <a href="./index.html"><strong>Receipt Generator</strong></a> | 
+        <a href="./sku.html">SKU Generator</a>
+    </nav>
+    <hr>
+
+    <py-script src="main.py"></py-script>
+
+    <h1>Welcome to Untitled Guitar Store!</h1>
+    <form>
+        <h2>Menu</h2>
+        <input id="item1" type="checkbox" value="540">
+        <label for="item1"> Elixir Acoustic Strings</label> 
+        <br>
+        <input id="item2" type="checkbox" value="200">
+        <label for="item2"> Dunlop Guitar Picks (pack of 6)</label> 
+        <br>
+        <input id="item3" type="checkbox" value="1000">
+        <label for="item3"> Fender Guitar Strap</label> 
+        <br>
+        <input id="item4" type="checkbox" value="560">
+        <label for="item4"> Daddario Guitar Tuner</label> 
+        <br>
+        <input id="item5" type="checkbox" value="2100">
+        <label for="item5">truss rod</label> 
+        <br>
+        <input type="button" value="calculate total" py-click="calculate_total">
+    </form>
+
+    <br><br>
+    <p>RECEIPT:</p>
+    <div id="receipt"></div>
+</body>
+</html>

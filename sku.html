@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <title>SKU Generator</title>
+</head>
+<body>
+    
+    <nav>
+        <a href="./index.html">Receipt Generator</a> | 
+        <a href="./sku.html"><strong>SKU Generator</strong></a>
+    </nav>
+    <hr>
+
+    <py-script src="sku.py"></py-script>
+
+    <h1>SKU Generator</h1>
+    <form>
+        <label for="category">Category:</label><br>
+        <select id="category">
+            <option value="STR">Strings</option>
+            <option value="PIC">Picks</option>
+            <option value="ACC">Accessories</option>
+            <option value="TOO">Tools</option>
+        </select>
+        <br><br>
+
+        <label for="prod_name">Product Name:</label><br>
+        <input id="prod_name" type="text" placeholder="Ex. truss rod">
+        <br><br>
+
+        <label for="stock_qty">Stock Quantity:</label><br>
+        <input id="stock_qty" type="number" placeholder="Ex. 10">
+        <br><br>
+
+        <input type="button" value="Generate SKU" py-click="generate_sku">
+    </form>
+    
+
+    <br><br>
+    <p>GENERATED SKU:</p>
+    <div id="sku_result">Your SKU will appear here</div>
+</body>
+</html>
